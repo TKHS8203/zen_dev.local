@@ -1,7 +1,7 @@
 # Web development environment
 ##  開発の流れ
 #### ローカル
-・VirtualBox上でVagrantを起動、指定のディレクトリ下にあるファイルをエディターでhtml / php / css / JSをごにょごにょしていく
+・VirtualBox上でVagrantを起動、指定のディレクトリ下にあるファイルをエディターでhtml / php / css / JSをごにょごにょしていく。
 ・CSSはSASSで書きます。
 SASSやJSのコンパイル・圧縮をするため webpackを使用
 ・デグレすると怖いのでバージョン管理しています。
@@ -49,6 +49,18 @@ function FindProxyForURL(url, host) {
 
 ここまで終わったら、vagrant に環境をクローン
 !! 開発環境を入れるディレクトリ（容量やread writeが早い場所、SSDとか）に移動してから
+`$ cd /Volumes/[USER NAME]/zen_dev.local/sites/`
 `$ git clone https://github.com/TKHS8203/zen_dev.local.git`
 `$ cd zen_dev.local`
 `$ vagrant up`
+※開発環境を入れるディレクトリはgit cloneするとzen_dev.localというディレクトリが作られます。
+### プロジェクトが始まったら行うこと
+- リポジトリのクローン
+	-  sourceTree のNew... > Clone from URLから付与されたリポジトリのURLを入力、Destination Pathはプロジェクトを置くディレクトリに
+	- またはシェルで直接`/Volumes/[USER NAME]/zen_dev.local/sites/`上で
+	`$ git clone https://github.com/TKHS8203/[PROJECT NAME].dev.local.git`
+- node package module / webpackなどをインストール
+  - `$ cd [PROJECT NAME].dev.local`
+  - `$ npm install` or `$ npm i`
+  - ※ターミナル上でエラーを吐いていたら教えてください。何らかのパッケージがインストールできなかったり環境が違う可能性があります。
+- 当日、または自分がコミットする前にSourceTreeでフェッチをしましょう。更新があるとプルを促してくれます。コンフリクトしたときは呼んでください。

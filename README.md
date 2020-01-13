@@ -13,7 +13,7 @@ SASSやJSのコンパイル・圧縮をするため webpackを使用
 ## things to do.
 ・インストールするもの
 - visual studio code [vsc](https://azure.microsoft.com/ja-jp/products/visual-studio-code/) またはatom[ATOM](https://atom.io/)  
->※どちらでも問題ない、shellが使えるvscがおすすめです。
+>※どちらでも問題ない、vscがおすすめです。
 ※ editor configプラグインは必須
 
 - sourcetree [sourcetree](https://www.sourcetreeapp.com/) 

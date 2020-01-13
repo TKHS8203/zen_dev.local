@@ -25,7 +25,7 @@ __ 環境の同期 __
 ※ node / npmはOSに入っているものを上書きしないよう、下記home brew経由でnode npm等のバージョンをあげてください。（プロジェクトによってはnode / npmバージョンを変更する必要ある） 
 ## for mac.
 ### Install homebrew
-`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+`$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 ・homebrew で nodeをインストール
 `$ brew install nodebrew`
 参考URL [Qiita nodebrew でバージョン指定インストール](https://qiita.com/mame_daifuku/items/373daf5f49ee585ea498)
@@ -46,3 +46,9 @@ function FindProxyForURL(url, host) {
 }
 ```
 システム環境設定 > ネットワーク > Wi-FiやEthernetなど接続している方の右下にある詳細ボタンからプロキシを選択、`自動プロキシ構成`にチェック。URLは先ほど保存した場所に設定します。
+
+ここまで終わったら、vagrant に環境をクローン
+!! 開発環境を入れるディレクトリ（容量やread writeが早い場所、SSDとか）に移動してから
+`$ git clone https://github.com/TKHS8203/zen_dev.local.git`
+`$ cd zen_dev.local`
+`$ vagrant up`

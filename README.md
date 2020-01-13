@@ -48,7 +48,6 @@ function FindProxyForURL(url, host) {
 システム環境設定 > ネットワーク > Wi-FiやEthernetなど接続している方の右下にある詳細ボタンからプロキシを選択、`自動プロキシ構成`にチェック。URLは先ほど保存した場所に設定します。
 
 ここまで終わったら、vagrant に環境をクローン
-
 !! 開発環境を入れるディレクトリ（容量やread writeが早い場所、SSDとか）に移動してから
 `$ cd /Volumes/[USER NAME]/zen_dev.local/sites/`
 `$ git clone https://github.com/TKHS8203/zen_dev.local.git`
@@ -65,3 +64,5 @@ function FindProxyForURL(url, host) {
   - `$ npm install` or `$ npm i`
   - ※ターミナル上でエラーを吐いていたら教えてください。何らかのパッケージがインストールできなかったり環境が違う可能性があります。
 - 当日、または自分がコミットする前にSourceTreeでフェッチをしましょう。更新があるとプルを促してくれます。コンフリクトしたときは呼んでください。
+  - ターミナルでは`$ git fetch` またはそのまま`$ git pull`
+  - gitにプッシュするときは `$ git add --all` [Enter ->] `$ git commit -m'some commit message'` [Enter ->] `$ git push`

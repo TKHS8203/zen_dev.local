@@ -46,8 +46,18 @@ function FindProxyForURL(url, host) {
 }
 ```
 システム環境設定 > ネットワーク > Wi-FiやEthernetなど接続している方の右下にある詳細ボタンからプロキシを選択、`自動プロキシ構成`にチェック。URLは先ほど保存した場所に設定します。
+## for win.
+windows ではXAMPPを使用
+phpのバージョンは7.1に揃えておきたいので以下を参考にしてください。
+（よく使うレンサバが7.1なので）
+[# xamppで複数のバージョンのphpを切り替えて使いたい](https://qiita.com/shie2/items/65234ffb6753e277d621)
+ node バージョン管理（ライブラリの指定はないです）
+ ここではnvm-windowsのバージョン指定を記載しておきます
+ [# nvm-windowsでNode.jsのバージョン管理をする](https://cartman0.hatenablog.com/entry/2019/03/29/nvm-windows%E3%81%A7Node.js%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E7%AE%A1%E7%90%86%E3%82%92%E3%81%99%E3%82%8B)
+ 
+## start up.
 
-ここまで終わったら、vagrant に環境をクローン
+ここまで終わったら、環境をクローン
 !! 開発環境を入れるディレクトリ（容量やread writeが早い場所、SSDとか）に移動してから
 `$ cd /Volumes/[USER NAME]/zen_dev.local/sites/`
 `$ git clone https://github.com/TKHS8203/zen_dev.local.git`

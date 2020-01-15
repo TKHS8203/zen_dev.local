@@ -1,5 +1,8 @@
 # Web development environment
 ##  開発の流れ
+・仮想環境を構築して、GitHubから環境をクローン。
+・webpackでファイルやデータを生成する
+
 #### ローカル
 ・VirtualBox上でVagrantを起動、指定のディレクトリ下にあるファイルをエディターでhtml / php / css / JSをごにょごにょしていく。
 ・CSSはSASSで書きます。

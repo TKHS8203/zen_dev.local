@@ -74,6 +74,7 @@ phpのバージョンは7.1に揃えておきたいので以下を参考にし�
 	`$ git clone https://github.com/TKHS8203/[PROJECT NAME].dev.local.git`
 - node package module / webpackなどをインストール
   - `$ cd [PROJECT NAME].dev.local`
+  - `$ cd _dev`
   - `$ npm install` or `$ npm i`
   - ※ターミナル上でエラーを吐いていたら教えてください。何らかのパッケージがインストールできなかったり環境が違う可能性があります。
 - 当日、または自分がコミットする前にSourceTreeでフェッチをしましょう。更新があるとプルを促してくれます。コンフリクトしたときは呼んでください。

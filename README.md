@@ -36,6 +36,8 @@ __ 環境の同期 __
 ### Install VirtualBox & Vagrant.
 -  [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 -  [Vagrant](https://www.vagrantup.com/downloads.html)
+※Vagrantより最新のvirtualBoxをインストールすると何故かvagrant側がvirtualBoxを認識しないので、いっこ前のvirtualBoxのインストールをする。
+
 ### set proxy auto-configuration
 .proxy.pac というファイル名で以下を保存  場所は [file:///Users/ユーザー名/.proxy.pac]
 ```bash

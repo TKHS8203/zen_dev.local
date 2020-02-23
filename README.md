@@ -64,7 +64,7 @@ phpのバージョンは7.1に揃えておきたいので以下を参考にし�
 
 ここまで終わったら、環境をクローン
 !! 開発環境を入れるディレクトリ（容量やread writeが早い場所、SSDとか）に移動してから
-`$ cd /Volumes/[USER NAME]/zen_dev.local/sites/`
+`$ cd /Volumes/[USER NAME]/開発環境を入れたい場所/`
 `$ git clone https://github.com/TKHS8203/zen_dev.local.git`
 `$ cd zen_dev.local`
 `$ vagrant up`

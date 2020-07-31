@@ -23,8 +23,9 @@ SASSやJSのコンパイル・圧縮をするため webpackを使用
 [ バージョン管理ソフト（Git）納品データなどはこちらでコンフリクト回避しながら運用してます。 ] 
  
 __ 環境の同期 __
-・node  version : v12.7.0
-・npm version : 6.10.3
+
+・node  version : v12.18.2
+・npm version : 6.14.5
 ※ node / npmはOSに入っているものを上書きしないよう、下記home brew経由でnode npm等のバージョンをあげてください。（プロジェクトによってはnode / npmバージョンを変更する必要ある） 
 ## for mac.
 ### Install homebrew
@@ -36,7 +37,8 @@ __ 環境の同期 __
 ### Install VirtualBox & Vagrant.
 -  [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 -  [Vagrant](https://www.vagrantup.com/downloads.html)
-※Vagrantより最新のvirtualBoxをインストールすると何故かvagrant側がvirtualBoxを認識しないので、いっこ前のvirtualBoxのインストールをする。
+※Vagrantより最新のvirtualBoxをインストールすると何故かvagrant側がvirtualBoxを認識しないので、いっこ前のvirtualBoxをインストールをする。
+2020/08現在はvirtualbox 6.0を推奨
 
 ### set proxy auto-configuration
 .proxy.pac というファイル名で以下を保存  場所は [file:///Users/ユーザー名/.proxy.pac]
@@ -69,6 +71,31 @@ phpのバージョンは7.4に揃えておきたいので以下を参考にし�
 `$ cd zen_dev.local`
 `$ vagrant up`
 ※開発環境を入れるディレクトリはgit cloneするとzen_dev.localというディレクトリが作られます。
+
+## phpmyadmin バージョンアップ
+phpmyadminは$vagrant upした時最新版のものがインストールされる訳ではないのでphp7.4でぬるっと動くバージョンを入れる。
+`$ vagrant ssh`
+`$ sudo service mysql stop`
+`$ cd /usr/share`
+`$ /usr/share $ sudo mv phpMyAdmin phpMyAdmin.old`
+
+`$ sudo wget https://files.phpmyadmin.net/phpMyAdmin/4.9.5/phpMyAdmin-4.9.5-all-languages.zip`
+
+`$ sudo unzip phpMyAdmin-4.9.5-all-languages.zip`
+// unzipないって言われたら
+`$ sudo apt-get install unzip`
+`$ sudo mv phpMyAdmin-4.9.5-all-languages phpmyadmin`
+
+`$ sudo rm phpMyAdmin-4.9.5-all-languages.zip`
+
+`$ sudo chmod -R 775 phpmyadmin`
+
+`$ sudo service mysql start`
+`$ sudo service apache start`
+// serviceのstartがここでできなくてもOK
+vargrant sshをexitしたら`$ vagrant reload`で再起動
+念の為phpmyadmin内のバージョンは確認して　4.9.5になっていたら終了
+
 ### プロジェクトが始まったら行うこと
 - リポジトリのクローン
 	-  sourceTree のNew... > Clone from URLから付与されたリポジトリのURLを入力、Destination Pathはプロジェクトを置くディレクトリに

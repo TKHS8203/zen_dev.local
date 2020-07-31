@@ -96,6 +96,15 @@ phpmyadminは$vagrant upした時最新版のものがインストールされ�
 vargrant sshをexitしたら`$ vagrant reload`で再起動
 念の為phpmyadmin内のバージョンは確認して　4.9.5になっていたら終了
 
+新しいphpmyadmin行くとtmpへのアクセス権が何たらと小言(`(./tmp/) にアクセスできません。phpMyAdmin はテンプレートをキャッシュすることができないため、低速になります。`)を言われたら
+chown か chmodする
+$ cd /usr/share/phpmyadmin/
+$ mkdir tmp
+// 実行ユーザー変更する場合 実行ユーザーがvagrantの場合
+$ chown vagrant phpmyadmin -R
+// ファイル権限ガバガバにする場合
+$ sudo chmod 777 tmp
+
 ### プロジェクトが始まったら行うこと
 - リポジトリのクローン
 	-  sourceTree のNew... > Clone from URLから付与されたリポジトリのURLを入力、Destination Pathはプロジェクトを置くディレクトリに
